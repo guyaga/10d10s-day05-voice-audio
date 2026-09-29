@@ -44,11 +44,11 @@ This skill lets you **generate professional voiceovers, music, and sound effects
 
 ## New: Eleven v4 (September 2026)
 
-The skill now uses **Eleven v4**, ElevenLabs' newest model. If you installed the skill before, update it (see [Already installed? Update to v4](#already-installed-update-to-v4)).
+The skill now uses **Eleven v4**, ElevenLabs' newest model. **You don't need to pick a model or tune any settings:** the skill already chooses the best model with settings tuned for great results. Just ask for what you want, and if you feel like playing, everything stays open. If you installed the skill before, update it (see [Already installed? Update to v4](#already-installed-update-to-v4)).
 
 | What changed | What it means for you |
 |---|---|
-| **More natural voices** | Better quality, emotion and delivery than any previous model. Always use v4 |
+| **More natural voices** | Better quality, emotion and delivery than any previous model |
 | **Much more accurate clones** | Your cloned voice sounds more like you. It may sound different from how it sounded on v3 |
 | **Audio tags replace sliders** | Direct the performance with `[warm]`, `[whispers]`, `[laughs]`, `[slowly]` instead of style/speed settings |
 | **Fluent in every language** | A Hebrew clone speaking English sounds like fluent English, without carrying the Hebrew accent |
@@ -103,7 +103,7 @@ export ELEVEN_API_KEY=your-api-key-here
 Open Claude Code and paste:
 
 ```
-Install the ai-voice-audio skill globally: clone https://github.com/guyaga/10d10s-day05-voice-audio into ~/.claude/skills/ai-voice-audio (my home folder, not this project), then help me set up my ElevenLabs API key and test it with one short sentence on the eleven_v4 model.
+Install the ai-voice-audio skill globally: clone https://github.com/guyaga/10d10s-day05-voice-audio into ~/.claude/skills/ai-voice-audio (my home folder, not this project), then help me set up my ElevenLabs API key and test it with one short sentence.
 ```
 
 ### Manual Way
@@ -119,7 +119,7 @@ The skill lives in your home folder, so it works in every project.
 Paste this into Claude Code:
 
 ```
-Update my ai-voice-audio skill to the latest version from https://github.com/guyaga/10d10s-day05-voice-audio (git pull in ~/.claude/skills/ai-voice-audio, or re-clone it there if it is not a git folder). Then generate one short test sentence with eleven_v4 so I can hear the difference.
+Update my ai-voice-audio skill to the latest version from https://github.com/guyaga/10d10s-day05-voice-audio (git pull in ~/.claude/skills/ai-voice-audio, or re-clone it there if it is not a git folder). Then generate one short test sentence so I can hear the difference.
 ```
 
 Or manually: `git -C ~/.claude/skills/ai-voice-audio pull`
@@ -237,8 +237,8 @@ Eleven v4 reproduces the source recording very faithfully, flaws included. So:
 | "Quota exceeded" | Check credits at elevenlabs.io. Free tier resets monthly |
 | Tag was read out loud | Put the tag in square brackets right before the words, e.g. `[laughs]`, and keep it short |
 | My clone sounds different than before | That's v4's higher accuracy: it copies your recording more faithfully. Re-record a cleaner 1-2 minute sample if needed |
-| Hebrew comes out garbled | Make sure the model is `eleven_v4` (not multilingual_v2 / flash) and ask Claude to use a script, not curl |
-| Voice sounds robotic | Use the `eleven_v4` model, lower stability (0.3-0.5), and add audio tags like `[warm]` |
+| Hebrew comes out garbled | Update the skill to the latest version (the prompt above). It already handles Hebrew correctly |
+| Voice sounds robotic | Ask Claude for a more lively delivery, or add audio tags like `[warm]` or `[excited]` before the words |
 | Clone doesn't sound like me | Record 1-2 minutes in one speaking style, quiet room, no echo. v4 copies the recording's flaws too |
 | Audio too fast/slow | v4 has no speed slider: use tags like `[slowly]` or `[quick pace]`, ellipses and shorter sentences |
 

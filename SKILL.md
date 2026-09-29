@@ -30,7 +30,7 @@ Generate professional voice narration, dialogue, music, and sound effects direct
 | Eleven v4 Turbo | `eleven_v4_turbo` | Real-time: voice agents, interactive apps. Very high quality at low latency. | 10,000 |
 | Flash v2.5 | `eleven_flash_v2_5` | Ultra-low latency, 32 languages, **no Hebrew**. | 40,000 |
 
-**Rule: always use `eleven_v4`.** Use `eleven_v4_turbo` only when the user needs speed or real-time. **Never use `eleven_v3`, `eleven_multilingual_v2` or older models unless the user explicitly names that model.** If old notes, code or a previous project say `eleven_v3`, switch it to `eleven_v4` (and drop `style` / `speed` / `use_speaker_boost` from the voice settings). When updating or first testing the skill, confirm to the user that it runs on Eleven v4.
+**Rule: always use `eleven_v4`.** Use `eleven_v4_turbo` only when the user needs speed or real-time. **Never use `eleven_v3`, `eleven_multilingual_v2` or older models unless the user explicitly names that model.** If old notes, code or a previous project say `eleven_v3`, switch it to `eleven_v4` (and drop `style` / `speed` / `use_speaker_boost` from the voice settings). **How to talk about it:** the user never has to choose a model or tune settings. When installing, updating or first testing, tell them in one line that the skill already uses the best model (Eleven v4) with settings tuned for great results, so they can just ask for what they want. These are good defaults, not locks: if the user asks for a different model, more or less expressive delivery, other stability/similarity values, or any other tweak, just do it. Encourage them to play with audio tags.
 
 ### What changed from v3 (important)
 

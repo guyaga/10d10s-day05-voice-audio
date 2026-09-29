@@ -32,11 +32,11 @@ This skill lets you **generate professional voiceovers, music, and sound effects
 
 | Feature | What It Means |
 |---------|---------------|
-| **V3 Model** | Most natural AI voice ever — barely distinguishable from real speech |
+| **Eleven v4** | The newest model: most natural voice yet, much more accurate voice clones, 85 languages |
 | **Voice Cloning** | Record 1 minute of your voice → AI speaks anything in YOUR voice |
-| **32+ Languages** | Same voice, different language — Hebrew, English, Spanish, anything |
+| **85 Languages** | Same voice, different language, spoken fluently: Hebrew, English, Spanish, anything |
 | **Music + SFX** | Not just voices — generate background music and sound effects too |
-| **Emotion control** | Adjust stability, style, speed — make it dramatic, calm, or energetic |
+| **Emotion control** | Audio tags like `[whispers]`, `[laughs]`, `[excited]` direct the performance line by line |
 
 ---
 
@@ -181,9 +181,9 @@ For the best clone quality:
 |---------|----------|
 | "API key not found" | Set `ELEVEN_API_KEY` in your terminal |
 | "Quota exceeded" | Check credits at elevenlabs.io. Free tier resets monthly |
-| Voice sounds robotic | Use `eleven_v3` model and adjust stability lower (0.3-0.5) |
-| Clone doesn't sound like me | Record a longer sample (2+ minutes), in a quiet room |
-| Audio too fast/slow | Adjust `speed` setting (0.7-1.2) |
+| Voice sounds robotic | Use the `eleven_v4` model, lower stability (0.3-0.5), and add audio tags like `[warm]` |
+| Clone doesn't sound like me | Record 1-2 minutes in one speaking style, quiet room, no echo. v4 copies the recording's flaws too |
+| Audio too fast/slow | v4 has no speed slider: use tags like `[slowly]` or `[quick pace]`, ellipses and shorter sentences |
 
 ---
 

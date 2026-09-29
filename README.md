@@ -48,7 +48,7 @@ The skill now uses **Eleven v4**, ElevenLabs' newest model. If you installed the
 
 | What changed | What it means for you |
 |---|---|
-| **More natural voices** | Better quality, emotion and delivery than v3 in almost every case |
+| **More natural voices** | Better quality, emotion and delivery than any previous model. Always use v4 |
 | **Much more accurate clones** | Your cloned voice sounds more like you. It may sound different from how it sounded on v3 |
 | **Audio tags replace sliders** | Direct the performance with `[warm]`, `[whispers]`, `[laughs]`, `[slowly]` instead of style/speed settings |
 | **Fluent in every language** | A Hebrew clone speaking English sounds like fluent English, without carrying the Hebrew accent |
@@ -203,7 +203,7 @@ Eleven v4 reproduces the source recording very faithfully, flaws included. So:
 4. **Same mic, same distance** — volume jumps show up in the clone too
 5. **Speak the way you want the clone to sound** — energetic sample, energetic clone
 6. **Use similarity_boost 0.8-0.9** for cloned voices
-7. **Cloned on v3 before?** Your voice works on v4 as is. Compare both and keep the one you prefer
+7. **Cloned your voice before?** It works on v4 as is, no re-recording needed
 
 ---
 
@@ -236,7 +236,7 @@ Eleven v4 reproduces the source recording very faithfully, flaws included. So:
 | "API key not found" | Set `ELEVEN_API_KEY` in your terminal |
 | "Quota exceeded" | Check credits at elevenlabs.io. Free tier resets monthly |
 | Tag was read out loud | Put the tag in square brackets right before the words, e.g. `[laughs]`, and keep it short |
-| My clone sounds different than before | That's v4's higher accuracy. Compare with `eleven_v3` and keep the one you prefer |
+| My clone sounds different than before | That's v4's higher accuracy: it copies your recording more faithfully. Re-record a cleaner 1-2 minute sample if needed |
 | Hebrew comes out garbled | Make sure the model is `eleven_v4` (not multilingual_v2 / flash) and ask Claude to use a script, not curl |
 | Voice sounds robotic | Use the `eleven_v4` model, lower stability (0.3-0.5), and add audio tags like `[warm]` |
 | Clone doesn't sound like me | Record 1-2 minutes in one speaking style, quiet room, no echo. v4 copies the recording's flaws too |

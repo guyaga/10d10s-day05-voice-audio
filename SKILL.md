@@ -28,10 +28,9 @@ Generate professional voice narration, dialogue, music, and sound effects direct
 |-------|-----|----------|---------------------|
 | **Eleven v4** ⭐ | `eleven_v4` | **Default. Use this.** Narration, audiobooks, characters, ads, anything where quality matters. 85 languages incl. Hebrew. | 10,000 |
 | Eleven v4 Turbo | `eleven_v4_turbo` | Real-time: voice agents, interactive apps. Very high quality at low latency. | 10,000 |
-| Eleven v3 | `eleven_v3` | Previous generation. Only if you prefer how a specific voice sounded on v3. | 5,000 |
 | Flash v2.5 | `eleven_flash_v2_5` | Ultra-low latency, 32 languages, **no Hebrew**. | 40,000 |
 
-**Rule: always default to `eleven_v4`. Use `eleven_v4_turbo` only when the user needs speed or real-time.**
+**Rule: always use `eleven_v4`.** Use `eleven_v4_turbo` only when the user needs speed or real-time. **Never use `eleven_v3`, `eleven_multilingual_v2` or older models unless the user explicitly names that model.** If old notes, code or a previous project say `eleven_v3`, switch it to `eleven_v4` (and drop `style` / `speed` / `use_speaker_boost` from the voice settings). When updating or first testing the skill, confirm to the user that it runs on Eleven v4.
 
 ### What changed from v3 (important)
 
@@ -176,7 +175,7 @@ The response has a `voice_id`. Use it like any other voice, with `eleven_v4`.
 3. **Quiet room, no echo, no music,** no fans or AC. v4 reproduces background noise and room sound.
 4. **Same mic, same distance.** Volume jumps and harsh S sounds in the sample will show up in the clone.
 5. **Speak the way you want the clone to sound.** Energetic sample, energetic clone.
-6. **Already have a v3 clone?** Just switch `model_id` to `eleven_v4` and compare. It may sound different, usually closer to you. Pick the one you like.
+6. **Already have a clone from before?** It works on `eleven_v4` as is, no re-recording needed, and usually sounds even more like you.
 7. **Professional Voice Clones** (trained on longer recordings) work on v4 too: in ElevenLabs → My Voices, hover the voice and click + next to Eleven v4.
 
 ## Music generation
@@ -241,7 +240,7 @@ Or just tell Claude Code: *"Generate a warm voiceover saying 'Welcome to our pro
 
 ## Best practices
 
-1. **Use `eleven_v4`** unless you need real-time (`eleven_v4_turbo`).
+1. **Always `eleven_v4`** (or `eleven_v4_turbo` for real-time). Never v3 or older unless the user explicitly asks.
 2. **Send only `stability` and `similarity_boost`.** Direct everything else with tags and punctuation.
 3. **Hebrew:** Node/Python script, `language_code: "he"`, never curl on Windows.
 4. **Test one short sentence first,** especially with new tags or a new clone.
